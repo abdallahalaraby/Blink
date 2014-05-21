@@ -13,7 +13,7 @@ import android.view.View.MeasureSpec;
 public class Screenshot {
 
 	public static void takeScreenshot(View view, String filePath) {
-		Bitmap bitmap = getBitmapScreenshot(view, filePath);
+		Bitmap bitmap = getBitmapScreenshot(view);
 
 		File imageFile = new File(filePath);
 		try {
@@ -28,7 +28,7 @@ public class Screenshot {
 		}
 	}
 
-	public static Bitmap getBitmapScreenshot(View view, String filePath) {
+	public static Bitmap getBitmapScreenshot(View view) {
 		view.measure(MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED), MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
 		view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
 
