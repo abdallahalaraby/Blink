@@ -29,8 +29,8 @@ public class Screenshot {
 	}
 
 	public static Bitmap getBitmapScreenshot(View view) {
-		view.measure(MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED), MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
-		view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
+		view.measure(MeasureSpec.makeMeasureSpec(view.getWidth(), MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(view.getHeight(), MeasureSpec.EXACTLY));
+		view.layout((int)view.getX(), (int)view.getY(), (int)view.getX() + view.getMeasuredWidth(), (int)view.getY() + view.getMeasuredHeight());
 
 		view.setDrawingCacheEnabled(true);
 		view.buildDrawingCache(true);
