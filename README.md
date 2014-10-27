@@ -11,4 +11,4 @@ imageView.setImageBitmap(Screenshot.getBitmapScreenshot(view, mPath));
 
 <h3>Permissions:</h3>
 The following permission is needed:
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+\<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
