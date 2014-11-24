@@ -16,6 +16,7 @@ public class Screenshot {
 		Bitmap bitmap = getBitmapScreenshot(view);
 
 		File imageFile = new File(filePath);
+		imageFile.getParentFile().mkdirs();
 		try {
 			OutputStream fout = new FileOutputStream(imageFile);
 			bitmap.compress(Bitmap.CompressFormat.JPEG, 90, fout);
