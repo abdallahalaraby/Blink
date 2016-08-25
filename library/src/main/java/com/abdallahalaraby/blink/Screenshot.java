@@ -1,4 +1,4 @@
-package com.abdallahalaraby.screenshot;
+package com.abdallahalaraby.blink;
 
 import android.graphics.Bitmap;
 import android.view.View;

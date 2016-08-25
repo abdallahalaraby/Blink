@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.abdallahalaraby.screenshot" >
+	package="com.abdallahalaraby.blink">
 
 	<application
 		android:allowBackup="true"
