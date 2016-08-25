@@ -1,4 +1,4 @@
-android-ViewScreenshot
+Blink
 ======================
 
 Android library that enables the user to take a screenshot from any view
