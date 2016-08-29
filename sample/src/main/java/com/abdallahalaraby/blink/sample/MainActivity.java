@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.b_capture) {
-            Bitmap bitmap = Screenshot.getInstance().takeScreenshot(tv_hello_world);
+            Bitmap bitmap = Screenshot.getInstance().takeScreenshotForView(tv_hello_world);
             iv_output.setImageBitmap(bitmap);
         }
     }
