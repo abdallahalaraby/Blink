@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion 26
@@ -25,4 +27,83 @@ repositories {
 
 dependencies {
     compile "com.android.support:support-v4:26.1.0"
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+group = 'com.abdallahalaraby.blink'
+version = '0.1.1'
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name 'Blink'
+            description 'Android library that enables users to take screenshots for Views and Activities.'
+            url 'https://github.com/abdallahalaraby/Blink'
+            inceptionYear '2016'
+
+            packaging 'aar'
+            groupId 'com.abdallahalaraby.blink'
+            artifactId 'blink'
+            version '0.1.1'
+
+            licenses {
+                license {
+                    name 'Apache-2.0'
+                    url 'https://opensource.org/licenses/apache2.0.php'
+                }
+            }
+            scm {
+                connection 'https://github.com/abdallahalaraby/Blink.git'
+                url 'https://github.com/abdallahalaraby/Blink'
+
+            }
+            developers {
+                developer {
+                    id = 'abdallahalaraby'
+                    name 'Abdallah'
+                }
+            }
+        }
+    }
+}
+
+Properties bintrayProperties = new Properties()
+bintrayProperties.load(project.rootProject.file('bintray.properties').newDataInputStream())
+
+bintray {
+    user = bintrayProperties.getProperty('user')
+    key = bintrayProperties.get('key')
+    configurations = ['archives']
+    pkg {
+        repo = 'Blink'
+        name = 'Blink'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/abdallahalaraby/Blink'
+        publish = true
+        version {
+            name = '0.1.1'
+            desc = 'Blink 0.1.1'
+            released = new Date()
+            vcsTag = 'v0.1.1'
+        }
+    }
 }
