@@ -100,10 +100,10 @@ bintray {
         vcsUrl = 'https://github.com/abdallahalaraby/Blink'
         publish = true
         version {
-            name = '0.1.1'
-            desc = 'Blink 0.1.1'
+            name = '0.1.2'
+            desc = 'Blink 0.1.2'
             released = new Date()
-            vcsTag = 'v0.1.1'
+            vcsTag = 'v0.1.2'
         }
     }
 }
