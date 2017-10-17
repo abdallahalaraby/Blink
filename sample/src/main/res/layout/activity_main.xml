@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.abdallahalaraby.blink.sample.MainActivity">
+    tools:context="com.abdallahalaraby.blink.sample.com.test.blink.sample.MainActivity">
 
     <TextView
         android:id="@+id/tv_hello_world"

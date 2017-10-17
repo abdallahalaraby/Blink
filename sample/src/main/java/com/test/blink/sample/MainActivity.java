@@ -1,4 +1,4 @@
-package com.abdallahalaraby.blink.sample;
+package com.test.blink.sample;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
