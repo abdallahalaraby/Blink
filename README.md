@@ -1,7 +1,7 @@
 Blink
 ======================
 
-Android library that enables the user to take a screenshot from any view
+Android library that enables users to take screenshots for Views and Activities.
 
 <h2>Usage:</h2>
 	
