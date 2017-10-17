@@ -1,6 +1,8 @@
 Blink
 ======================
 
+[ ![Download](https://api.bintray.com/packages/abdallahalaraby/Blink/Blink/images/download.svg) ](https://bintray.com/abdallahalaraby/Blink/Blink/_latestVersion)
+
 Android library that enables users to take screenshots for Views and Activities.
 
 <h2>Usage:</h2>
