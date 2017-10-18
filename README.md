@@ -6,14 +6,7 @@ Blink
 Android library that enables users to take screenshots for Views and Activities.
 
 <h2>Dependency:</h2>
-Include Blink into your project by adding the following lines under your project-level build.gradle
-	
-	allprojects {
-	    repositories {
-        	maven { url 'https://dl.bintray.com/abdallahalaraby/Blink' }
-	    }
-	}
-Then add the following line in your module-level build.gradle
+Include Blink into your project by adding the following line in your module-level build.gradle
 
 	compile 'com.abdallahalaraby.blink:library:0.1.2@aar'
 
